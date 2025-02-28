@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://dtqm0hoopxauk"]
+
+[ext_resource type="Texture2D" uid="uid://dt2xqiiaer2p7" path="res://d0913ntc7b861.jpg" id="1_l1sqq"]
+[ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="1_myfbw"]
+[ext_resource type="Script" path="res://level_1.gd" id="1_x5khh"]
+[ext_resource type="Texture2D" uid="uid://bipms5o18btvw" path="res://d0913ntc7b861.png" id="3_w7v61"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2frm2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bq1rh"]
+font_size = 105
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4r2m"]
+size = Vector2(330.921, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8rnwx"]
+size = Vector2(607.237, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ugu1"]
+size = Vector2(95.9078, 223.453)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75efa"]
+size = Vector2(2383.22, 144)
+
+[node name="Node2D" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_2frm2")
+script = ExtResource("1_x5khh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3515.5, 2265.5)
+scale = Vector2(10.2282, 10.4931)
+texture = ExtResource("3_w7v61")
+
+[node name="LEVEL1" type="Sprite2D" parent="."]
+position = Vector2(3398.5, 2784)
+scale = Vector2(10.5073, 12.8657)
+texture = ExtResource("1_l1sqq")
+
+[node name="character" parent="." instance=ExtResource("1_myfbw")]
+position = Vector2(130, 4155)
+walk_speed = 500.0
+acceleration = 0.157
+deceleration = 0.148
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="Node2D"]
+wait_time = 3.437
+
+[node name="Label" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 102.0
+offset_right = 854.0
+offset_bottom = 1128.0
+text = "CONTROLS
+
+W/SPACE = JUMP
+A = LEFT
+D = RIGHT
+T = TIMESTOP
+U = UNPAUSE"
+label_settings = SubResource("LabelSettings_bq1rh")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+position = Vector2(2893, 497)
+scale = Vector2(3.04, 7.709)
+polygon = PackedVector2Array(969.408, 631.47, 962, 578, 1048.03, 578.189, 1148, 578, 1139.8, 629.654)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(285, 4394)
+scale = Vector2(3.04, 1)
+shape = SubResource("RectangleShape2D_x4r2m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(678, 4980)
+scale = Vector2(3.04, 1)
+shape = SubResource("RectangleShape2D_8rnwx")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(3794, 5280.27)
+scale = Vector2(3.04, 1)
+shape = SubResource("RectangleShape2D_2ugu1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-394, 1280)
+scale = Vector2(6.52757, 6.34727)
+polygon = PackedVector2Array(644.804, 543.856, 648.94, 601.203, 648, 645, 708.47, 644.981, 750, 648, 749.455, 580.065, 698.441, 578.016, 695.359, 547.164)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
+position = Vector2(-139, 689)
+scale = Vector2(6.22006, 7.53472)
+polygon = PackedVector2Array(990.337, 569.84, 988.415, 485.751, 1036.97, 484.026, 1039.22, 458.942, 1148.38, 458.942, 1149, 626, 983, 622, 985.481, 604.362)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(3425, 5446)
+scale = Vector2(3.04, 1)
+shape = SubResource("RectangleShape2D_75efa")
+
+[connection signal="timeout" from="Node2D/Timer" to="." method="_on_timer_timeout"]

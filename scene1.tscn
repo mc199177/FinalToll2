@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ywk0mfqoq43e"]
+
+[ext_resource type="Texture2D" uid="uid://42c4jcg65don" path="res://Background_2.png" id="1_3e0jb"]
+[ext_resource type="Texture2D" uid="uid://diqvukrb4rgu6" path="res://Background_1.png" id="2_a757r"]
+[ext_resource type="Texture2D" uid="uid://baik078tirdus" path="res://sun-transparent-minecraft-9.png" id="3_vcgj7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1xtw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Opening" type="Sprite2D" parent="."]
+position = Vector2(578, 324)
+scale = Vector2(2.31855, 2.39706)
+texture = ExtResource("1_3e0jb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Opening"]
+position = Vector2(-0.86261, -0.417175)
+scale = Vector2(1.00174, 0.98773)
+texture = ExtResource("2_a757r")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Opening"]
+position = Vector2(160.445, -65.4969)
+scale = Vector2(0.0731342, 0.069832)
+texture = ExtResource("3_vcgj7")
+
+[node name="Label" type="Label" parent="Opening"]
+offset_left = -30.6226
+offset_top = -31.7055
+offset_right = 26.3774
+offset_bottom = -8.70552
+text = "Level 1"
+label_settings = SubResource("LabelSettings_q1xtw")
