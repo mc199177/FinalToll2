@@ -37,10 +37,7 @@ scale = Vector2(10.5073, 12.8657)
 texture = ExtResource("1_l1sqq")
 
 [node name="character" parent="." instance=ExtResource("1_myfbw")]
-position = Vector2(130, 4155)
-walk_speed = 500.0
-acceleration = 0.157
-deceleration = 0.148
+position = Vector2(-91, 4233)
 
 [node name="Node2D" type="Node2D" parent="."]
 
