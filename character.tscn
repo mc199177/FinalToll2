@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://qq85bowm5t4m"]
+[gd_scene load_steps=21 format=3 uid="uid://qq85bowm5t4m"]
 
 [ext_resource type="Texture2D" uid="uid://dqyvx7dvip4n1" path="res://yeah.png" id="1_temur"]
 [ext_resource type="Script" path="res://character.gd" id="1_wnkg5"]
@@ -121,6 +121,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6gp0"]
 size = Vector2(151.5, 51)
 
+[sub_resource type="LabelSettings" id="LabelSettings_x7a6e"]
+font_size = 70
+
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_wnkg5")
 
@@ -140,3 +143,17 @@ position = Vector2(1509, -1352)
 zoom = Vector2(2, 1.4)
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = -190.0
+offset_top = -1433.0
+offset_right = 372.0
+offset_bottom = -743.0
+text = "CONTROLS
+
+W/SPACE = JUMP
+A = LEFT
+D = RIGHT
+T = TIMESTOP
+U = UNPAUSE"
+label_settings = SubResource("LabelSettings_x7a6e")

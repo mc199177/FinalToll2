@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqnl4v5wjspol"]
+
+[ext_resource type="Texture2D" uid="uid://c4o1v3sp2ut6g" path="res://level2.jpg" id="1_lpm0r"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_givku"]
+
+[node name="level2" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_givku")
+
+[node name="Level2" type="Sprite2D" parent="."]
+position = Vector2(627, 91)
+texture = ExtResource("1_lpm0r")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 3)
+polygon = PackedVector2Array(-348, 66, -202, 65, -200, -4, 84, -4, 82, 356, 378, 358, 376, 282, 662, 282, 662, 425, 1311, 427, 1311, 282, 1384, 281, 1385, 138, 1604, 141, 1601, 568, -347, 568)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(2, 0)
+polygon = PackedVector2Array(807, 139, 1019, 139, 1019, 279, 807, 278)

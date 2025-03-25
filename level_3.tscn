@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ofsxalptt163"]
+
+[ext_resource type="Texture2D" uid="uid://dv02xiflrol37" path="res://level3.png" id="1_kcbtn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pitww"]
+
+[node name="Level3" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_pitww")
+
+[node name="Level3" type="Sprite2D" parent="."]
+position = Vector2(325, 194)
+texture = ExtResource("1_kcbtn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(6, 290, 37, 290, 38, 259, 229, 260, 229, 289, 260, 289, 260, 322, 324, 323, 324, 356, 356, 356, 356, 385, 6, 386)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(3, 0)
+polygon = PackedVector2Array(419, 260, 419, 288, 451, 288, 451, 320, 513, 321, 514, 353, 547, 353, 547, 386, 643, 385, 643, 258)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(199, 130, 262, 130, 262, 99, 387, 99, 387, 128, 293, 128, 293, 163, 199, 162)
