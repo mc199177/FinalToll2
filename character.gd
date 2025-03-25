@@ -17,7 +17,7 @@ func _process(_delta):
 	if Input.is_action_pressed("attack"):
 		_animated_sprite.play("attack")
 
-const JUMP_VELOCITY = -1000.0
+const JUMP_VELOCITY = -1200.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -35,3 +35,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, walk_speed)
 
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
