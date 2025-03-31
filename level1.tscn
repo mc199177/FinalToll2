@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtqm0hoopxauk"]
+[gd_scene load_steps=11 format=3 uid="uid://dtqm0hoopxauk"]
 
 [ext_resource type="Texture2D" uid="uid://dt2xqiiaer2p7" path="res://d0913ntc7b861.jpg" id="1_l1sqq"]
 [ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="1_myfbw"]
 [ext_resource type="Script" path="res://level_1.gd" id="1_x5khh"]
 [ext_resource type="Texture2D" uid="uid://bipms5o18btvw" path="res://d0913ntc7b861.png" id="3_w7v61"]
+[ext_resource type="Texture2D" uid="uid://ddkpfacxxho2y" path="res://91122e048bc8557.png" id="5_uh3me"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2frm2"]
 
@@ -86,5 +87,10 @@ polygon = PackedVector2Array(3938, 4728, 5207, 4720, 5214, 4139, 5864, 4139, 586
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="."]
 position = Vector2(-18, 84)
 polygon = PackedVector2Array(8706, 3818, 9336, 3818, 9363, 4096, 11280, 4123, 11285, 4544, 11151, 4641, 10906, 4715, 9977, 4699, 9977, 4822, 9859, 4945, 9662, 4993, 9304, 5020, 9192, 4966, 8978, 4673, 8781, 4571)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(12510, 4468)
+scale = Vector2(0.3125, 0.59)
+texture = ExtResource("5_uh3me")
 
 [connection signal="timeout" from="Node2D/Timer" to="." method="_on_timer_timeout"]
