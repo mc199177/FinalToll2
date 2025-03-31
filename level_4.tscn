@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://djld6ple2ghh7"]
+[gd_scene load_steps=4 format=3 uid="uid://djld6ple2ghh7"]
 
 [ext_resource type="Texture2D" uid="uid://cldmjfhqaiqlg" path="res://level4.jpg" id="1_v8ynr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwwla"]
 size = Vector2(2064, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sramw"]
 
 [node name="level4" type="StaticBody2D"]
 
@@ -14,6 +16,7 @@ polygon = PackedVector2Array(-404, 313, -214, 314, -200, 286, -217, 261, -215, 2
 polygon = PackedVector2Array(316, 168, 408, 168, 407, 216, 739, 218, 740, 243, 729, 255, 714, 253, 694, 269, 692, 282, 670, 306, 507, 308, 468, 357, 395, 358, 319, 287)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
 texture = ExtResource("1_v8ynr")
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
@@ -40,3 +43,30 @@ polygon = PackedVector2Array(28, 25, 264, 26, 261, 45, 250, 59, 223, 71, 58, 71,
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 624)
 shape = SubResource("RectangleShape2D_iwwla")
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-598, 363, -461, 362, -461, 388, -501, 410, -567, 410, -596, 386)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="."]
+position = Vector2(-2, -4)
+polygon = PackedVector2Array(-169, -210, -172, -184, -206, -169, -275, -168, -302, -183, -307, -209)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-114, -116, 19, -117, 19, -93, -11, -75, -82, -74, -113, -92)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(122, 266, 263, 266, 258, 294, 221, 312, 157, 312, 129, 294)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(541, 120, 609, 120, 648, 93, 648, 75, 504, 75, 504, 90)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(649, 363, 791, 363, 791, 381, 781, 396, 749, 408, 682, 408, 660, 396, 649, 383)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sramw")
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(696, 506, 1030, 504, 1030, 598, 697, 598, 712, 573, 697, 547)
