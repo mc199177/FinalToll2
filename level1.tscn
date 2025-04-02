@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtqm0hoopxauk"]
+[gd_scene load_steps=11 format=3 uid="uid://dtqm0hoopxauk"]
 
 [ext_resource type="Texture2D" uid="uid://dt2xqiiaer2p7" path="res://d0913ntc7b861.jpg" id="1_l1sqq"]
 [ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="1_myfbw"]
@@ -7,88 +7,115 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2frm2"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_bq1rh"]
+font_size = 105
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4r2m"]
-size = Vector2(630.592, 83)
+size = Vector2(329.276, 83)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8rnwx"]
-size = Vector2(1144.08, 56)
+size = Vector2(606.579, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ugu1"]
-size = Vector2(128.875, 286.727)
+size = Vector2(88.8156, 226.727)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75efa"]
-size = Vector2(4507.4, 144)
+size = Vector2(2381.99, 194)
 
 [node name="Node2D" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_2frm2")
 script = ExtResource("1_x5khh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3414, 2777.5)
-scale = Vector2(10.5233, 12.8634)
+position = Vector2(3385.5, 2281)
+scale = Vector2(10.4317, 10.5648)
 texture = ExtResource("3_w7v61")
 
 [node name="LEVEL1" type="Sprite2D" parent="."]
-position = Vector2(6649.5, 2847.7)
-scale = Vector2(19.9579, 18.7606)
+position = Vector2(3379.49, 2269.5)
+scale = Vector2(10.4521, 10.5764)
 texture = ExtResource("1_l1sqq")
 
 [node name="character" parent="." instance=ExtResource("1_myfbw")]
-<<<<<<< HEAD
-position = Vector2(-91, 4233)
-=======
-position = Vector2(114, 4944)
+position = Vector2(130, 3395)
 walk_speed = 500.0
 acceleration = 0.157
 deceleration = 0.148
->>>>>>> 10b402ee5978aca00dfb1c09cb02ddabe460aa4d
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Timer" type="Timer" parent="Node2D"]
 wait_time = 3.437
 
+[node name="Label" type="Label" parent="."]
+offset_left = -4973.0
+offset_top = 2507.0
+offset_right = -4130.0
+offset_bottom = 3533.0
+text = "CONTROLS
+
+W/SPACE = JUMP
+A = LEFT
+D = RIGHT
+T = TIMESTOP
+U = UNPAUSE"
+label_settings = SubResource("LabelSettings_bq1rh")
+
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
-position = Vector2(8344, 1560)
-scale = Vector2(3.04, 7.709)
-polygon = PackedVector2Array(970.395, 654.041, 967.434, 575.561, 1174.01, 576.599, 1366.12, 575.042, 1354.61, 652.484)
+position = Vector2(3811, 297)
+scale = Vector2(2.05648, 6.13265)
+polygon = PackedVector2Array(965.79, 662.083, 968.421, 611.234, 1110.53, 609.288, 1531.58, 610.455, 1525.99, 663.251)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(753, 5149)
+position = Vector2(285.5, 3585)
 scale = Vector2(3.04, 1)
 shape = SubResource("RectangleShape2D_x4r2m")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(1526, 6033)
+position = Vector2(710, 4080)
 scale = Vector2(3.04, 1)
 shape = SubResource("RectangleShape2D_8rnwx")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(7323, 6447)
+<<<<<<< HEAD
+position = Vector2(3776, 4333)
+=======
+position = Vector2(5451, 5314)
+>>>>>>> 7fa5370cb1f640be540a1c088de06d90c2cd11d4
 scale = Vector2(3.04, 1)
 shape = SubResource("RectangleShape2D_2ugu1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(3247, 2239)
+<<<<<<< HEAD
+position = Vector2(686.812, 684.256)
+scale = Vector2(4.81715, 5.69963)
+polygon = PackedVector2Array(647.102, 560.241, 647.102, 609.711, 649.399, 654.927, 720.789, 655.4, 790.34, 655.872, 790.034, 589.702, 715.887, 588.284, 714.661, 560.241)
+=======
+position = Vector2(1344, 1246)
 scale = Vector2(6.52757, 6.34727)
-polygon = PackedVector2Array(647.255, 546.219, 648.94, 601.203, 651.085, 680.765, 709.299, 683.443, 849.78, 684.861, 845.031, 592.223, 748.671, 593.168, 749.284, 549.212)
+polygon = PackedVector2Array(647.102, 560.241, 647.102, 609.711, 647.408, 656.503, 720.176, 656.66, 790.953, 657.133, 790.034, 589.702, 714.048, 590.333, 713.742, 560.556)
+>>>>>>> 7fa5370cb1f640be540a1c088de06d90c2cd11d4
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
-position = Vector2(6385, 1360)
-scale = Vector2(6.22006, 7.53472)
-polygon = PackedVector2Array(839.863, 618.868, 836.487, 500.881, 942.435, 499.156, 941.47, 461.596, 1148.38, 458.942, 1145.33, 692.527, 984.717, 694.385, 987.933, 616.745)
+position = Vector2(1546, 80.0008)
+scale = Vector2(4.46082, 6.36893)
+polygon = PackedVector2Array(988.415, 543.749, 1068, 544.413, 1067.35, 516.675, 1221.37, 516.675, 1221.37, 626.964, 1139.7, 628.026, 1101.44, 626.964, 986.968, 625.77, 990.344, 604.535)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(6662, 6679)
+position = Vector2(3380.37, 4477)
 scale = Vector2(3.04, 1)
 shape = SubResource("RectangleShape2D_75efa")
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
-position = Vector2(-17, 93)
-polygon = PackedVector2Array(3938, 4728, 5207, 4720, 5214, 4139, 5864, 4139, 5864, 3837, 6475, 3837, 6475, 4728, 6777, 4713, 6785, 5090, 6634, 5264, 6430, 5302, 5841, 5264, 5818, 5407, 5554, 5611, 5033, 5588, 4867, 5294, 4097, 5279, 4059, 5158, 3961, 5151)
+position = Vector2(-100.35, -128.715)
+scale = Vector2(0.701816, 0.840278)
+polygon = PackedVector2Array(2919, 4165, 3875, 4165, 3875, 3745, 4367, 3741, 4367, 3529, 4831, 3529, 4831, 4149, 5067, 4149, 5067, 4453, 4911, 4569, 4379, 4569, 4115, 4789, 3799, 4785, 3631, 4589, 3067, 4573, 2927, 4457)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="."]
-position = Vector2(-18, 84)
-polygon = PackedVector2Array(8706, 3818, 9336, 3818, 9363, 4096, 11280, 4123, 11285, 4544, 11151, 4641, 10906, 4715, 9977, 4699, 9977, 4822, 9859, 4945, 9662, 4993, 9304, 5020, 9192, 4966, 8978, 4673, 8781, 4571)
+position = Vector2(-190, 95.733)
+scale = Vector2(0.714441, 0.786716)
+polygon = PackedVector2Array(6525, 3533, 6982, 3533, 6982, 3725, 8418, 3728, 8412, 4041, 8301, 4142, 7480, 4138, 7480, 4270, 7339, 4360, 6925, 4360, 6528, 4034)
 
 [connection signal="timeout" from="Node2D/Timer" to="." method="_on_timer_timeout"]
