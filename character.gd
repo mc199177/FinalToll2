@@ -17,7 +17,7 @@ func _process(_delta):
 	if Input.is_action_pressed("attack"):
 		_animated_sprite.play("attack")
 
-const JUMP_VELOCITY = -1000.0
+const JUMP_VELOCITY = -1500.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
