@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj2m0cu62hox2"]
+
+[ext_resource type="Texture2D" uid="uid://x3321wciud6p" path="res://level3.png" id="1_dyj81"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35kax"]
+size = Vector2(32, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27n0h"]
+size = Vector2(78, 11)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Level3" type="Sprite2D" parent="."]
+texture = ExtResource("1_dyj81")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-320, 96, -290, 95, -288, 95, -286, 62, -96, 64, -93, 93, -64, 92, -63, 127, 1, 126, 0, 158, 33, 160, 31, 191, -319, 191)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-64, -97, 64, -96, 64, -64, -31, -64, -32, -32, -128, -32, -128, -65, -64, -64)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(320, 64, 97, 64, 97, 96, 128, 95, 127, 129, 192, 129, 192, 160, 224, 160, 224, 192, 320, 192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-303, 97.5)
+shape = SubResource("RectangleShape2D_35kax")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(281, 67.5)
+shape = SubResource("RectangleShape2D_27n0h")
