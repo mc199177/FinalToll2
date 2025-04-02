@@ -17,7 +17,7 @@ size = Vector2(479.605, 83)
 size = Vector2(878.948, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ugu1"]
-size = Vector2(95.9078, 223.453)
+size = Vector2(88.8156, 226.727)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75efa"]
 size = Vector2(3392.27, 194)
@@ -77,14 +77,14 @@ scale = Vector2(3.04, 1)
 shape = SubResource("RectangleShape2D_8rnwx")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(5464, 5314)
+position = Vector2(5451, 5314)
 scale = Vector2(3.04, 1)
 shape = SubResource("RectangleShape2D_2ugu1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(1344, 1246)
 scale = Vector2(6.52757, 6.34727)
-polygon = PackedVector2Array(647.102, 560.241, 647.102, 609.711, 649.399, 654.927, 720.789, 655.4, 790.34, 655.872, 790.034, 589.702, 715.887, 588.284, 714.661, 560.241)
+polygon = PackedVector2Array(647.102, 560.241, 647.102, 609.711, 647.408, 656.503, 720.176, 656.66, 790.953, 657.133, 790.034, 589.702, 714.048, 590.333, 713.742, 560.556)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
 position = Vector2(2531, 265)

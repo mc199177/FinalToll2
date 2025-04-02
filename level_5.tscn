@@ -11,4 +11,5 @@ physics_material_override = SubResource("PhysicsMaterial_5m4wx")
 texture = ExtResource("1_nl4om")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-970, 234, -639, 229, -639, 317, -372, 311, -372, 140, -210, 140, -209, 317, -28, 315, -31, 62, 222, 62, 226, 404, 492, 404, 491, 316, 749, 316, 752, 140, 972, 140, 972, 649, -976, 652)
+rotation = 0.000243624
+polygon = PackedVector2Array(-974.944, 229.238, -639, 229, -639, 317, -370.923, 317.09, -372.965, 143.091, -208.965, 143.051, -209, 317, -28, 315, -26.9859, 58.0066, 224, 59, 226, 404, 492, 404, 491, 316, 749, 316, 752, 140, 972, 140, 972, 649, -976, 652)
