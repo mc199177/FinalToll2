@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var walk_speed = 420.0
+@export var walk_speed = 150.0
 @export_range(0,1) var acceleration = 0.1
 @export_range(0,1) var deceleration = 0.1
 @onready var _animated_sprite = $AnimatedSprite2D
