@@ -1,5 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqnl4v5wjspol"]
+[gd_scene load_steps=2 format=3 uid="uid://cqnl4v5wjspol"]
 
+<<<<<<< HEAD
+[ext_resource type="PackedScene" uid="uid://cqnl4v5wjspol" path="res://level_2.tscn" id="1_s1tow"]
+=======
 <<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://6r0ug6vi4wvx" path="res://level2.jpg" id="1_lpm0r"]
 [ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_khn2a"]
@@ -7,9 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://c4o1v3sp2ut6g" path="res://level2.jpg" id="1_lpm0r"]
 [ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_sqlno"]
 >>>>>>> 7fa5370cb1f640be540a1c088de06d90c2cd11d4
+>>>>>>> 74efcb6def7c5e20fd74c1cbd5e3b6cb38305c7d
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_givku"]
+[node name="level2" instance=ExtResource("1_s1tow")]
 
+<<<<<<< HEAD
+[node name="CollisionPolygon2D" parent="." index="1"]
+position = Vector2(4302, 6268)
+polygon = PackedVector2Array(-350, 95.4799, -200, 95.4799, -201, 33.1667, 79, 32.1616, 79, 346.743, 376, 347.748, -1759.55, -888.354, -1526.82, -368.624, -318.815, -368.011, 123.183, -364.771, 2.30908, 1373.91, 858.434, -862.903, 858.685, -1363.42, 1598.69, -1369.07, 1600.66, 685.253, -350.346, 688.282)
+=======
 [node name="level2" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_givku")
 
@@ -51,3 +60,4 @@ polygon = PackedVector2Array(811, 81, 815, 81, 815, 74, 819, 74, 819, 77, 824, 7
 position = Vector2(-291, -43)
 scale = Vector2(0.236035, 0.221212)
 >>>>>>> 7fa5370cb1f640be540a1c088de06d90c2cd11d4
+>>>>>>> 74efcb6def7c5e20fd74c1cbd5e3b6cb38305c7d
