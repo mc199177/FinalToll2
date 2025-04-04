@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://be3mgsy804ruf"]
+[gd_scene load_steps=3 format=3 uid="uid://be3mgsy804ruf"]
+
+[ext_resource type="PackedScene" uid="uid://dtqm0hoopxauk" path="res://level1.tscn" id="1_615bq"]
+[ext_resource type="PackedScene" uid="uid://cqnl4v5wjspol" path="res://level_2.tscn" id="2_0rclj"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="levell1" type="Node2D" parent="."]
+
+[node name="level1" parent="levell1" instance=ExtResource("1_615bq")]
+
+[node name="levell2" type="Node2D" parent="."]
+
+[node name="level2" parent="levell2" instance=ExtResource("2_0rclj")]
+visible = false

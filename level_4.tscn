@@ -8,6 +8,7 @@ size = Vector2(2064, 42)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sramw"]
 
 [node name="level4" type="StaticBody2D"]
+position = Vector2(1030, 642)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-404, 313, -214, 314, -200, 286, -217, 261, -215, 218, -117, 218, -118, 170, -25, 170, -24, 259, -42, 279, -24, 310, 68, 311, 68, 338, 59, 348, 41, 346, 22, 365, -14, 405, -119, 406, -148, 450, -233, 453, -264, 406, -374, 406, -402, 374)

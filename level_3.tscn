@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ofsxalptt163"]
+[gd_scene load_steps=4 format=3 uid="uid://ofsxalptt163"]
 
 [ext_resource type="Texture2D" uid="uid://7x5nnp3hf7y5" path="res://level3.png" id="1_kcbtn"]
+[ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_rrcm1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pitww"]
 
@@ -8,15 +9,24 @@
 physics_material_override = SubResource("PhysicsMaterial_pitww")
 
 [node name="Level3" type="Sprite2D" parent="."]
-position = Vector2(325, 194)
+position = Vector2(3507.5, 2266.5)
+scale = Vector2(10.9453, 11.7943)
 texture = ExtResource("1_kcbtn")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-77.852, -186.152)
+scale = Vector2(11.2742, 12.2868)
 polygon = PackedVector2Array(6, 290, 37, 290, 38, 259, 229, 260, 229, 289, 260, 289, 260, 322, 324, 323, 324, 356, 356, 356, 356, 385, 6, 386)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
-position = Vector2(3, 0)
+position = Vector2(-46.0674, -48.3167)
+scale = Vector2(10.9894, 11.8457)
 polygon = PackedVector2Array(419, 260, 419, 288, 451, 288, 451, 320, 513, 321, 514, 353, 547, 353, 547, 386, 643, 385, 643, 258)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(199, 130, 262, 130, 262, 99, 387, 99, 387, 128, 293, 128, 293, 163, 199, 162)
+position = Vector2(-144, -28)
+scale = Vector2(11.2626, 11.8145)
+polygon = PackedVector2Array(199, 130, 262, 130, 262, 99, 351.408, 99, 387, 99, 387, 128, 340.814, 128, 293, 128, 293, 163, 199, 162)
+
+[node name="Node2D" parent="." instance=ExtResource("2_rrcm1")]
+position = Vector2(434, 2817)
