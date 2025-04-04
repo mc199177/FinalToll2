@@ -1,9 +1,63 @@
 [gd_scene load_steps=2 format=3 uid="uid://cqnl4v5wjspol"]
 
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://cqnl4v5wjspol" path="res://level_2.tscn" id="1_s1tow"]
+=======
+<<<<<<< HEAD
+[ext_resource type="Texture2D" uid="uid://6r0ug6vi4wvx" path="res://level2.jpg" id="1_lpm0r"]
+[ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_khn2a"]
+=======
+[ext_resource type="Texture2D" uid="uid://c4o1v3sp2ut6g" path="res://level2.jpg" id="1_lpm0r"]
+[ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_sqlno"]
+>>>>>>> 7fa5370cb1f640be540a1c088de06d90c2cd11d4
+>>>>>>> 74efcb6def7c5e20fd74c1cbd5e3b6cb38305c7d
 
 [node name="level2" instance=ExtResource("1_s1tow")]
 
+<<<<<<< HEAD
 [node name="CollisionPolygon2D" parent="." index="1"]
 position = Vector2(4302, 6268)
 polygon = PackedVector2Array(-350, 95.4799, -200, 95.4799, -201, 33.1667, 79, 32.1616, 79, 346.743, 376, 347.748, -1759.55, -888.354, -1526.82, -368.624, -318.815, -368.011, 123.183, -364.771, 2.30908, 1373.91, 858.434, -862.903, 858.685, -1363.42, 1598.69, -1369.07, 1600.66, 685.253, -350.346, 688.282)
+=======
+[node name="level2" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_givku")
+
+[node name="Level2" type="Sprite2D" parent="."]
+<<<<<<< HEAD
+position = Vector2(3501, 2264.25)
+scale = Vector2(3.58256, 3.44038)
+texture = ExtResource("1_lpm0r")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(1214, 2079)
+scale = Vector2(3.66127, 3.16798)
+polygon = PackedVector2Array(-345.892, 32.6902, -201.862, 36.2243, -194.136, -45.9429, 85.0946, -39.7583, 83.439, 351.199, 375.362, 356.058, 372.7, 268.349, 660.869, 271.364, 662.87, 434.691, 1044.19, 435.133, 1296.38, 435.133, 1296.38, 273.449, 1369.78, 274.774, 1373.64, 119.275, 1586.1, 114.416, 1590.51, 560.592, -347, 568)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(1171, 1971)
+scale = Vector2(3.6797, 3.37452)
+polygon = PackedVector2Array(807, 139, 1019, 139, 1019, 279, 807, 278)
+
+[node name="Node2D" parent="." instance=ExtResource("2_khn2a")]
+position = Vector2(421, 2011)
+scale = Vector2(0.921966, 1.06915)
+=======
+position = Vector2(3540, 2280.5)
+scale = Vector2(3.5559, 3.44538)
+texture = ExtResource("1_lpm0r")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(5387, 3814)
+rotation = -0.000505353
+scale = Vector2(1, 0.994974)
+polygon = PackedVector2Array(-350, 95.4799, -200, 95.4799, -201, 33.1667, 79, 32.1616, 79, 346.743, 376, 347.748, 377, 284.43, 656, 285.435, 658, 411.066, 123.183, -364.771, 600.167, -331.362, 858.434, -862.903, 858.685, -1363.42, 1598.69, -1369.07, 1600.66, 685.253, -350.346, 688.282)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(-252, -253)
+polygon = PackedVector2Array(811, 81, 815, 81, 815, 74, 819, 74, 819, 77, 824, 77, 824, 69, 829, 69, 829, 74, 833, 74, 833, 81, 838, 81, 838, 76, 843, 76, 843, 69, 846, 69, 846, 74, 851, 74, 851, 69, 856, 69, 856, 73, 860, 73, 860, 76, 865, 76, 865, 81, 870, 81, 870, 73, 874, 73, 874, 69, 882, 69, 882, 74, 892, 74, 892, 69, 896, 69, 896, 74, 901, 74, 901, 76, 906, 76, 906, 69, 909, 69, 909, 74, 914, 74, 914, 69, 919, 69, 919, 74, 923, 74, 923, 77, 928, 77, 928, 73, 936, 73, 936, 73, 936, 69, 941, 69, 941, 74, 946, 74, 946, 69, 960, 69, 960, 74, 964, 74, 964, 80, 969, 80, 969, 76, 972, 76, 972, 69, 977, 69, 977, 76, 982, 76, 982, 73, 991, 73, 991, 81, 996, 81, 996, 73, 1000, 73, 1000, 69, 1004, 69, 1004, 76, 1009, 76, 1009, 74, 1013, 74, 1013, 81, 1018, 81, 1018, 56, 811, 56)
+
+[node name="Node2D" parent="." instance=ExtResource("2_sqlno")]
+position = Vector2(-291, -43)
+scale = Vector2(0.236035, 0.221212)
+>>>>>>> 7fa5370cb1f640be540a1c088de06d90c2cd11d4
+>>>>>>> 74efcb6def7c5e20fd74c1cbd5e3b6cb38305c7d

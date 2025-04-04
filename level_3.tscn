@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ofsxalptt163"]
 
-[ext_resource type="Texture2D" uid="uid://dv02xiflrol37" path="res://level3.png" id="1_kcbtn"]
+[ext_resource type="Texture2D" uid="uid://7x5nnp3hf7y5" path="res://level3.png" id="1_kcbtn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pitww"]
 

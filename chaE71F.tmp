@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://qq85bowm5t4m"]
+[gd_scene load_steps=22 format=3 uid="uid://qq85bowm5t4m"]
 
 [ext_resource type="Texture2D" uid="uid://dqyvx7dvip4n1" path="res://yeah.png" id="1_temur"]
 [ext_resource type="Script" path="res://character.gd" id="1_wnkg5"]
@@ -124,6 +124,9 @@ size = Vector2(151.5, 51)
 [sub_resource type="LabelSettings" id="LabelSettings_x7a6e"]
 font_size = 70
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmvsg"]
+size = Vector2(343, 452)
+
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_wnkg5")
 
@@ -132,20 +135,15 @@ position = Vector2(2, -12)
 scale = Vector2(6.31579, 5.7963)
 sprite_frames = SubResource("SpriteFrames_1ag6d")
 animation = &"idle"
-autoplay = "idle"
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-13, 99)
 shape = SubResource("RectangleShape2D_f6gp0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-<<<<<<< HEAD
-position = Vector2(924, -739)
-zoom = Vector2(2.857, 2)
-=======
-position = Vector2(1125, -372)
-zoom = Vector2(2.6, 2)
->>>>>>> 74efcb6def7c5e20fd74c1cbd5e3b6cb38305c7d
+position = Vector2(1509, -1352)
+zoom = Vector2(2, 1.4)
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
@@ -161,4 +159,25 @@ A = LEFT
 D = RIGHT
 T = TIMESTOP
 U = UNPAUSE"
+<<<<<<< HEAD
+label_settings = SubResource("LabelSettings_rkkpl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1216, -1444)
+zoom = Vector2(2.3, 1.2)
+limit_left = -10000266
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(36.5, -39)
+shape = SubResource("RectangleShape2D_bmvsg")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+=======
 label_settings = SubResource("LabelSettings_x7a6e")
+>>>>>>> c5bf8abd9d68156a10ea770fdff1a1eb779be876

@@ -8,3 +8,7 @@ func _process(_delta):
 	if Input.is_action_pressed("unpause"):
 		$LEVEL1.show()
 		$Sprite2D.hide()
+
+
+func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	pass # Replace with function body.
