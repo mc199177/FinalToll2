@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://csiofuqi6lmus"]
+[gd_scene load_steps=6 format=3 uid="uid://csiofuqi6lmus"]
 
 [ext_resource type="Texture2D" uid="uid://dt2xqiiaer2p7" path="res://d0913ntc7b861.jpg" id="1_d7urg"]
+[ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_6gn57"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hgxl"]
 size = Vector2(93.5, 8)
@@ -46,3 +47,7 @@ shape = SubResource("RectangleShape2D_sbnwq")
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-345, 199, 343, 199, 343, 215, -344, 216)
+
+[node name="Node2D" parent="." instance=ExtResource("2_6gn57")]
+position = Vector2(-328, 98)
+scale = Vector2(0.124314, 0.131368)

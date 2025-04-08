@@ -17,13 +17,10 @@ func _process(_delta):
 	if Input.is_action_pressed("attack"):
 		_animated_sprite.play("attack")
 
-<<<<<<< HEAD
-const JUMP_VELOCITY = -1000.0
-=======
-const JUMP_VELOCITY = -1500.0
->>>>>>> 7cda10400c3cc9817ade89057f700801c132d0bc
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+const JUMP_VELOCITY = -1000.0
+
 
 func _physics_process(delta):
 	if not is_on_floor():
