@@ -35,3 +35,4 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, walk_speed)
 
 	move_and_slide()
+	

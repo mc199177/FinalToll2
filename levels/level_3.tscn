@@ -1,13 +1,56 @@
-[gd_scene load_steps=6 format=3 uid="uid://ofsxalptt163"]
+[gd_scene load_steps=12 format=3 uid="uid://ofsxalptt163"]
 
 [ext_resource type="Texture2D" uid="uid://7x5nnp3hf7y5" path="res://level3.png" id="1_7ovug"]
 [ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_1akbe"]
+[ext_resource type="Script" path="res://platform.gd" id="2_r2to4"]
+[ext_resource type="Texture2D" uid="uid://bsjdgna5vcnlw" path="res://levels/23431 (1).png" id="3_ca6ep"]
 [ext_resource type="Script" path="res://winbox.gd" id="3_nxta2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pitww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3xfjq"]
 size = Vector2(504.5, 238)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykk61"]
+size = Vector2(427, 95)
+
+[sub_resource type="Animation" id="Animation_8toa1"]
+resource_name = "move"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.96667, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(907, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7jv15"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6pb41"]
+_data = {
+"RESET": SubResource("Animation_7jv15"),
+"move": SubResource("Animation_8toa1")
+}
 
 [node name="Level3" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_pitww")
@@ -33,7 +76,7 @@ scale = Vector2(11.2626, 11.8145)
 polygon = PackedVector2Array(199, 130, 262, 130, 262, 99, 351.408, 99, 387, 99, 387, 128, 340.814, 128, 293, 128, 293, 163, 199, 162)
 
 [node name="Node2D" parent="." instance=ExtResource("2_1akbe")]
-position = Vector2(434, 2817)
+position = Vector2(1831, 2777)
 
 [node name="Winbox" type="Area2D" parent="."]
 position = Vector2(4364, -452)
@@ -42,5 +85,24 @@ script = ExtResource("3_nxta2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Winbox"]
 position = Vector2(2367, 3515)
 shape = SubResource("RectangleShape2D_3xfjq")
+
+[node name="Platform" type="AnimatableBody2D" parent="."]
+scale = Vector2(-1.17582, 1.79998)
+script = ExtResource("2_r2to4")
+
+[node name="23431(1)" type="Sprite2D" parent="Platform"]
+position = Vector2(-2319.61, 1708.91)
+texture = ExtResource("3_ca6ep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(-2326.75, 1707.24)
+scale = Vector2(1.01956, 1.06147)
+shape = SubResource("RectangleShape2D_ykk61")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
+libraries = {
+"": SubResource("AnimationLibrary_6pb41")
+}
+autoplay = "move"
 
 [connection signal="body_entered" from="Winbox" to="Winbox" method="_on_body_entered"]

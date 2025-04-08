@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://csiofuqi6lmus"]
+
+[ext_resource type="Texture2D" uid="uid://dt2xqiiaer2p7" path="res://d0913ntc7b861.jpg" id="1_d7urg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hgxl"]
+size = Vector2(93.5, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3833a"]
+size = Vector2(63, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbnwq"]
+size = Vector2(112, 7)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="D0913Ntc7b861" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_d7urg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-40, 55, -8, 55, -8, 103, 8, 103, 7, 129, -6, 136, -39, 135, -50, 151, -79, 151, -89, 136, -128, 135, -134, 126, -136, 125, -136, 102, -71, 102, -72, 71, -39, 70)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(104, 55, 136, 55, 137, 71, 231, 71, 232, 95, 221, 104, 168, 104, 168, 109, 157, 119, 130, 119, 104, 93)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(23, 183, 41, 183, 40, 150, 72, 150, 72, 168, 104, 167, 104, 199, 23, 199)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-344, 118, -249, 119, -249, 166, -169, 167, -170, 197, -343, 199)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(342, 167, 229, 167, 234, 200, 344, 199)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-297, 122)
+shape = SubResource("RectangleShape2D_0hgxl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(311.5, 105)
+shape = SubResource("RectangleShape2D_3833a")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(287, 169.5)
+shape = SubResource("RectangleShape2D_sbnwq")
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-345, 199, 343, 199, 343, 215, -344, 216)
