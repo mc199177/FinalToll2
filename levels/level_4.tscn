@@ -1,4 +1,8 @@
+<<<<<<< HEAD:levels/level_4.tscn
 [gd_scene load_steps=6 format=3 uid="uid://djld6ple2ghh7"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://deg6fd4r2fmo2"]
+>>>>>>> ec7e236da7caaa340eb8c039e72c2465e5097dbd:level_4.tscn
 
 [ext_resource type="Texture2D" uid="uid://cldmjfhqaiqlg" path="res://level4.jpg" id="1_pb85h"]
 [ext_resource type="Script" path="res://winbox.gd" id="2_hbj42"]
