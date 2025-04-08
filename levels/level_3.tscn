@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ofsxalptt163"]
+[gd_scene load_steps=6 format=3 uid="uid://ofsxalptt163"]
 
-[ext_resource type="Texture2D" uid="uid://7x5nnp3hf7y5" path="res://level3.png" id="1_kcbtn"]
-[ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_rrcm1"]
+[ext_resource type="Texture2D" uid="uid://7x5nnp3hf7y5" path="res://level3.png" id="1_7ovug"]
+[ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_1akbe"]
+[ext_resource type="Script" path="res://winbox.gd" id="3_nxta2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pitww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xfjq"]
+size = Vector2(504.5, 238)
 
 [node name="Level3" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_pitww")
@@ -11,7 +15,7 @@ physics_material_override = SubResource("PhysicsMaterial_pitww")
 [node name="Level3" type="Sprite2D" parent="."]
 position = Vector2(3507.5, 2266.5)
 scale = Vector2(10.9453, 11.7943)
-texture = ExtResource("1_kcbtn")
+texture = ExtResource("1_7ovug")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-77.852, -186.152)
@@ -28,5 +32,15 @@ position = Vector2(-144, -28)
 scale = Vector2(11.2626, 11.8145)
 polygon = PackedVector2Array(199, 130, 262, 130, 262, 99, 351.408, 99, 387, 99, 387, 128, 340.814, 128, 293, 128, 293, 163, 199, 162)
 
-[node name="Node2D" parent="." instance=ExtResource("2_rrcm1")]
+[node name="Node2D" parent="." instance=ExtResource("2_1akbe")]
 position = Vector2(434, 2817)
+
+[node name="Winbox" type="Area2D" parent="."]
+position = Vector2(4364, -452)
+script = ExtResource("3_nxta2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winbox"]
+position = Vector2(2367, 3515)
+shape = SubResource("RectangleShape2D_3xfjq")
+
+[connection signal="body_entered" from="Winbox" to="Winbox" method="_on_body_entered"]

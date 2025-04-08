@@ -118,13 +118,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6gp0"]
-size = Vector2(151.5, 51)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnri4"]
+size = Vector2(175, 81)
 
 [sub_resource type="LabelSettings" id="LabelSettings_x7a6e"]
 font_size = 70
 
-[node name="Node2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_wnkg5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -134,9 +134,12 @@ sprite_frames = SubResource("SpriteFrames_1ag6d")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="Area2D" parent="."]
 position = Vector2(-13, 99)
-shape = SubResource("RectangleShape2D_f6gp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D"]
+position = Vector2(-4.5, -7.5)
+shape = SubResource("RectangleShape2D_wnri4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1125, -372)
@@ -157,3 +160,8 @@ D = RIGHT
 T = TIMESTOP
 U = UNPAUSE"
 label_settings = SubResource("LabelSettings_x7a6e")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-20, 91)
+shape = SubResource("RectangleShape2D_wnri4")

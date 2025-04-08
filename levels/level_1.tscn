@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dtqm0hoopxauk"]
+[gd_scene load_steps=13 format=3 uid="uid://dtqm0hoopxauk"]
 
 [ext_resource type="Texture2D" uid="uid://dt2xqiiaer2p7" path="res://d0913ntc7b861.jpg" id="1_l1sqq"]
 [ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="1_myfbw"]
 [ext_resource type="Script" path="res://level_1.gd" id="1_x5khh"]
 [ext_resource type="Texture2D" uid="uid://bipms5o18btvw" path="res://d0913ntc7b861.png" id="3_w7v61"]
+[ext_resource type="Script" path="res://winbox.gd" id="5_x43pp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2frm2"]
 
@@ -40,7 +41,7 @@ scale = Vector2(20.8198, 12.882)
 texture = ExtResource("1_l1sqq")
 
 [node name="character" parent="." instance=ExtResource("1_myfbw")]
-position = Vector2(252, 4166)
+position = Vector2(204, 4025)
 walk_speed = 500.0
 acceleration = 0.157
 deceleration = 0.148
@@ -111,12 +112,13 @@ position = Vector2(36.0001, -374)
 scale = Vector2(1.39065, 1.09486)
 polygon = PackedVector2Array(6525, 3533, 6982, 3533, 6982, 3725, 8418, 3728, 8412, 4041, 8301, 4142, 7480, 4138, 7480, 4270, 7339, 4360, 6925, 4360, 6528, 4034)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Winbox" type="Area2D" parent="."]
 position = Vector2(4364, -452)
+script = ExtResource("5_x43pp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(8080, 4793)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winbox"]
+position = Vector2(7664, 5418)
 shape = SubResource("RectangleShape2D_qtdsq")
 
 [connection signal="timeout" from="Node2D/Timer" to="." method="_on_timer_timeout"]
-[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Winbox" to="Winbox" method="_on_body_entered"]

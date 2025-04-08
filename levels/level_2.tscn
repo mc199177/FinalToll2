@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqnl4v5wjspol"]
+[gd_scene load_steps=6 format=3 uid="uid://cqnl4v5wjspol"]
 
 [ext_resource type="Texture2D" uid="uid://6r0ug6vi4wvx" path="res://level2.jpg" id="1_lpm0r"]
 [ext_resource type="PackedScene" uid="uid://qq85bowm5t4m" path="res://character.tscn" id="2_khn2a"]
+[ext_resource type="Script" path="res://winbox.gd" id="3_s4psv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_givku"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0atj3"]
+size = Vector2(504.5, 238)
 
 [node name="level2" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_givku")
@@ -26,3 +30,13 @@ polygon = PackedVector2Array(807, 139, 1019, 139, 1019, 279, 807, 278)
 [node name="Node2D" parent="." instance=ExtResource("2_khn2a")]
 position = Vector2(421, 2011)
 scale = Vector2(0.921966, 1.06915)
+
+[node name="Winbox" type="Area2D" parent="."]
+position = Vector2(4364, -452)
+script = ExtResource("3_s4psv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winbox"]
+position = Vector2(2222, 2958)
+shape = SubResource("RectangleShape2D_0atj3")
+
+[connection signal="body_entered" from="Winbox" to="Winbox" method="_on_body_entered"]
